@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang ="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Browser Storage</title>
+    </head>
+
+    <body>
+        <h1>Browser Storage Task</h1>
+        <form>
+            <label for="name" id="name">Name: </label>
+            <input type="text" id='ename' placeholder="Enter your name" required><br>
+            <button type="button" onclick="saveData()">Save</button>
+            <button type="button" onclick="loadData()">Load</button>
+        </form>
+
+        <script>
+            function saveData() {
+    
+                const inputVal = document.getElementById('ename').value;
+
+
+                localStorage.setItem('name', inputVal);
+
+
+                sessionStorage.setItem('name', inputVal);
+            }
+
+            function loadData() {
+
+                const localName = localStorage.getItem('name');
+                const sessionName = sessionStorage.getItem('name');
+
+                console.log("From Local Storage: ", localName);
+                console.log("From Local Storage: ", sessionName);
+            }
+        </script>
+
+    </body>
+</html>
