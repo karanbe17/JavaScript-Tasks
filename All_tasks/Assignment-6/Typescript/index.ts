@@ -1,4 +1,4 @@
-let prices: number[] = [1, 2, 3, 4, 5];
+const prices: number[] = [1, 2, 3, 4, 5];
 
 function calculateTotal (arr: number[]): number {
     return arr.reduce((acc: number, value: number) => {
